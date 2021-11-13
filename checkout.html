@@ -8,8 +8,8 @@
   <?php 
      session_start();
 
-      include("connection.php");
-      include("functions.php");
+      include("connection.html");
+      include("functions.html");
       check_login($con);
 
     $pid = $_REQUEST['buyid'];
@@ -29,17 +29,17 @@
         </div>
         
         <div class="menu">
-        <a href="home.php">Home</a>
-          <a href="shop.php">Shop</a>
+        <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
         </div>
         <div class="item">
           
           <?php
             if(!(isset($_SESSION['user_name']))){echo"
-              <a href='login.php'><button class='btn' onclick='login.php'>Login</button>
+              <a href='login.html'><button class='btn' onclick='login.html'>Login</button>
               </a>";}
             else{echo"
-              <a href='logout.php'><button class='btn' onclick='logout.php'>Log Out</button></a>";
+              <a href='logout.html'><button class='btn' onclick='logout.html'>Log Out</button></a>";
               }
             ?>
           
@@ -65,8 +65,8 @@
                 echo" <tr height='100px'><td>$pname</td><td>$pdate</td><td>Rs.$pprice.00</td></tr>              
                 
                 <tr>
-                <td><button onclick= document.location='shop.php'> Go Back </button></td><td></td>
-                <td><form action='http://localhost/legends/payment.php' method='POST'>
+                <td><button onclick= document.location='shop.html'> Go Back </button></td><td></td>
+                <td><form action='http://localhost/legends/payment.html' method='POST'>
                   <button type='submit' name='pay' value='{$row['pID']}' > Buy </button></form></td>    
             </tr>
                 
