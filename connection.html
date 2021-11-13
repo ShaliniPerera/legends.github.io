@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Connection</title>  
+  </head>
+  <body>
+  
+  <?php
+
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpass = "";
+$dbname = "legends";
+
+if(!$con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname))
+{
+
+	die("failed to connect!");
+}
+?>
+  
+    </body>
+</html>
