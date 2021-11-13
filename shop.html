@@ -24,17 +24,17 @@
         </div>
 
         <div class="menu">
-        <a href="home.php">Home</a>
-          <a href="shop.php">Shop</a>
+        <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
         </div>
         <div class="item">
         
           <?php
             if(!(isset($_SESSION['user_name']))){echo"
-              <a href='login.php'><button class='btn' onclick='login.php'>Login</button>
+              <a href='login.html'><button class='btn' onclick='login.html'>Login</button>
               </a>";}
             else{echo"
-              <a href='logout.php'><button class='btn' onclick='logout.php'>Log Out</button></a>";
+              <a href='logout.html'><button class='btn' onclick='logout.html'>Log Out</button></a>";
               }
             ?>        
         </div>
